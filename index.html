@@ -37,83 +37,83 @@
                   </div>
                   <div class="projects_right">
                       <div id="ass_parser_description" class="project_description" hidden>
-                          <h2>AssParser</h2>
+                          <div class="project_heading_div"><h2 class="project_heading">AssParser</h2></div>
                           <p id="ass_parser_para">
                             ass_parser is a crate to parse .ass (Advanced SubStation Alpha) files. which is a subtitle file for creating and displaying subtitles in video files. It is widely used due to it's complex text formatting, positioning and styling. The Advanced SubStation Alpha is a successor to the SubStation Alpha .ssa file.
                           </p>
 
-                          <a href="https://github.com/aavtic/ass_parser">ass_parser</a>
+                          <a href="https://github.com/aavtic/ass_parser" target="_blank" rel="noopener noreferrer">ass_parser</a>
                       </div>
 
 
                       <div id="coapi_rs_description" class="project_description" hidden>
-                          <h2>COAPI.rs</h2>
+                          <div class="project_heading_div"><h2 class="project_heading">COAPI.rs</h2></div>
                           <p id="coapi_rs_para">
                           COAPI-rs is is a Web-app for providing programming problems and testing them against users programs.
-                          <a href="https://github.com/aavtic/coapi.rs">coapi.rs</a>
+                          <a href="https://github.com/aavtic/coapi.rs" target="_blank" rel="noopener noreferrer">coapi.rs</a>
                           </p>
                       </div>
 
                     
                       <div id="save_cmd_description" class="project_description" hidden>
-                          <h2>save-cmd</h2>
+                          <div class="project_heading_div"><h2 class="project_heading">save-cmd</h2></div>
                           <p id="save_cmd_rs_para">
                            Tool to quickly save and retrieve commands.
 
-                           <a href="https://github.com/aavtic/save-cmd">save-cmd</a>
+                           <a href="https://github.com/aavtic/save-cmd" target="_blank" rel="noopener noreferrer">save-cmd</a>
                           </p>
                       </div>
 
 
                       <div id="pyrev_description" class="project_description" hidden>
-                          <h2>pyrev</h2>
+                          <div class="project_heading_div"><h2 class="project_heading">pyrev</h2></div>
                           <p id="pyrev_para">
                           Python Cross platform Reverse shell server and client with TLS/SSL security. 
 
-                           <a href="https://github.com/aavtic/pyrev">pyrev</a>
+                           <a href="https://github.com/aavtic/pyrev" target="_blank" rel="noopener noreferrer">pyrev</a>
                           </p>
                       </div>
 
 
                       <div id="ena_description" class="project_description" hidden>
-                          <h2>ENA</h2>
+                          <div class="project_heading_div"><h2 class="project_heading">ENA</h2></div>
                           <p id="ena_para">
                           ENA is a video generation program using GIFS!. Users can provide transcript for their videos and a video along with audio is generated based on the transcript.
 
-                           <a href="https://github.com/aavtic/pyrev">ena</a>
+                           <a href="https://github.com/aavtic/ena" target="_blank" rel="noopener noreferrer">ena</a>
                           </p>
                       </div>
 
 
 
                       <div id="filecrypt_description" class="project_description" hidden>
-                          <h2>FileCrypt</h2>
+                          <div class="project_heading_div"><h2 class="project_heading">FileCrypt</h2></div>
                           <p id="ena_para">
                           A program completely written in Rust to encrypt and decrypt files using a provided key.
 
-                           <a href="https://github.com/aavtic/filecrypt">FileCrypt</a>
+                           <a href="https://github.com/aavtic/filecrypt" target="_blank" rel="noopener noreferrer">FileCrypt</a>
                           </p>
                       </div>
 
 
                       <div id="gitcloner_description" class="project_description" hidden>
-                          <h2>GitCloner</h2>
+                          <div class="project_heading_div"><h2 class="project_heading">GitCloner</h2></div>
                           <p id="git_cloner_para">
                           GitCloner is a python script which you can use to clone github repositories without using git!, by only using requests!. We make use of GitHubs API. If you want to clone a private github repository you will need to have a key i.e. GitHub Fine Grained token. Here is the reference: fine grained token
 
-                           <a href="https://github.com/aavtic/gitcloner">gitcloner</a>
+                           <a href="https://github.com/aavtic/gitcloner" target="_blank" rel="noopener noreferrer">gitcloner</a>
                           </p>
                       </div>
 
 
                       <div id="ttype_description" class="project_description" hidden>
-                          <h2>ttype</h2>
+                          <div class="project_heading_div"><h2 class="project_heading">ttype</h2></div>
                           <p id="ttype_para">
                           ttype(Terminal Type)
 
                           A terminal based typing tool written in Rust.
 
-                           <a href="https://github.com/aavtic/ttype">ttype</a>
+                           <a href="https://github.com/aavtic/ttype" target="_blank" rel="noopener noreferrer">ttype</a>
                           </p>
                       </div>
 
@@ -124,8 +124,14 @@
 
       <script>
           const project_right = document.querySelector(".projects_right");
+          // clicked description
           let clicked = false;
           let clicked_element = null;
+
+          // clicked project sidebar button
+          let clicked_project = null;
+          let clicked_project_background = "#ffffff"; // white 
+          let clicked_project_foreground = "#ff0000"; // red
 
           var single_projects  = document.getElementsByClassName("single_project");
 
@@ -159,15 +165,35 @@
                       clicked = true;
                       clicked_element = description;
                       description.hidden = false;
+
+
+                      clicked_project = event.target;
+                      // Change css of the clicked project
+                      event.target.style.backgroundColor = clicked_project_background;
+                      event.target.style.color = clicked_project_foreground;
                   } else {
                       if (clicked_element === description) {
                           clicked = false;
                           clicked_element = null;
                           description.hidden = true;
+
+                          event.target.style.setProperty("background-color", "");
+                          event.target.style.setProperty("color", "");
+                          clicked_project = null;
                       } else {
                           clicked_element.hidden = true;
+                          // remove highlight of previous element
                           clicked_element = description;
                           description.hidden = false;
+
+                          clicked_project.style.setProperty("background-color", "");
+                          clicked_project.style.setProperty("color", "");
+
+                          // add highlight to current element
+                          event.target.style.backgroundColor = clicked_project_background;
+                          event.target.style.color = clicked_project_foreground;
+
+                          clicked_project = event.target;
                       }
                   }
               });
