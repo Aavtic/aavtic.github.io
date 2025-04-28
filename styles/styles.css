@@ -13,6 +13,10 @@ body {
     text-align: left;
 }
 
+#whoami_heading {
+    text-align: left;
+}
+
 .projects_container {
     display: flex;
 }
