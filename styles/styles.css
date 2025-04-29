@@ -9,6 +9,18 @@ body {
     text-align: center;
 }
 
+
+a:link, a:visited {
+  color: #fcf1b8;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.project_description a {
+    color: yellow;
+}
+
+
 #whoami {
     text-align: left;
 }
@@ -42,7 +54,11 @@ body {
 .project_description {
     padding: 2px;
 }
-
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
 
 .single_project {
     padding: 2px;
@@ -78,6 +94,12 @@ body {
 }
 
 .programming_languages {
+    max-width: 60%;
+    display: flex;
+    gap: 12px;
+}
+
+.languages {
     max-width: 60%;
     display: flex;
     gap: 12px;
