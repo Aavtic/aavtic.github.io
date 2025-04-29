@@ -48,7 +48,7 @@ body {
     padding: 2px;
 }
 
-.single_project:hover {
+.highlight:hover {
     background-color: white;
     color: black;
 }
@@ -75,4 +75,10 @@ body {
 @keyframes blink_cursor {
     from, to { border-color: yellow}
     50% { border-color: transparent }
+}
+
+.programming_languages {
+    max-width: 60%;
+    display: flex;
+    gap: 12px;
 }
