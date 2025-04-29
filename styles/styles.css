@@ -10,7 +10,13 @@ body {
 }
 
 
-a:link, a:visited {
+a:link {
+  color: #fcf1b8;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
   color: #fcf1b8;
   background-color: transparent;
   text-decoration: none;
