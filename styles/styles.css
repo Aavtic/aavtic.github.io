@@ -61,11 +61,6 @@ a:visited {
 .project_description {
     padding: 2px;
 }
-a:link {
-  color: green;
-  background-color: transparent;
-  text-decoration: none;
-}
 
 .single_project {
     padding: 2px;
