@@ -116,6 +116,18 @@ a:visited {
     gap: 12px;
 }
 
+@keyframes help_animation {
+    from {
+        color: black;
+        top: 115%;
+    }
+    to {
+        color: inherit;
+        top: 33%;
+    }
+}
+
+
 .floating {
     width: fit-content;
     height: fit-content;
@@ -126,7 +138,11 @@ a:visited {
     margin-left: -100px;
     background-color: black;
     
+    border-radius: 15px;
     padding: 20px;
+    
+    animation-name: help_animation;
+    animation-duration: 1s;
 }
 
 .help_msg {
@@ -138,3 +154,4 @@ a:visited {
 .blurr {
     filter: blur(4px);
 }
+
