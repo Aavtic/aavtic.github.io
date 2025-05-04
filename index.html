@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aadish(1)</title>
-    <link href="./resources/fonts/iosevka.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="resources/favicon.png" />
   </head>
@@ -330,7 +329,7 @@
           const whoami = document.getElementById("whoami");
 
           window.addEventListener("keydown", (e) => {
-              if (e.key == "j") {
+              if (e.key == "j" && !clicked_h) {
                   e.preventDefault();
                   window.scrollBy({
                   top: 100,
@@ -339,7 +338,7 @@
                 });
               }
 
-              if (e.key == "k") {
+              if (e.key == "k" && !clicked_h) {
                   e.preventDefault();
                   window.scrollBy({
                   top: -100,
@@ -348,7 +347,7 @@
                 });
               }
 
-              if (e.key == "G") {
+              if (e.key == "G" && !clicked_h) {
                   e.preventDefault();
                   window.scrollBy({
                       top: document.body.scrollHeight,
@@ -357,7 +356,7 @@
                   });
               }
 
-              if (e.key == "g") {
+              if (e.key == "g" && !clicked_h) {
                   e.preventDefault();
                   if (clicked_g) {
                       window.scrollBy({
@@ -373,12 +372,14 @@
               if (e.key == "h") {
                   e.preventDefault();
                   help_window.hidden = false;
+                  clicked_h = true;
                   whoami.classList.add("blurr");
               }
 
               if (e.key == "q") {
                   e.preventDefault();
                   help_window.hidden = true;
+                  clicked_h = false;
                   whoami.classList.remove("blurr");
               }
 
