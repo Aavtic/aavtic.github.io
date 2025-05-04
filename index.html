@@ -219,6 +219,7 @@
 
       <script>
           const project_right = document.querySelector(".projects_right");
+          const page = document.querySelector(".main_body");
           // clicked description
           let clicked = false;
           let clicked_element = null;
@@ -293,6 +294,72 @@
                   }
               });
           }
+
+
+        // ArrowDown
+        // ArrowUp
+        // PageDown
+        // PageUp
+        // Home
+        // End
+
+
+          function dispatchKeyboardEvent(key) {
+              const event = new KeyboardEvent('keypress', { key });
+              event.isTrusted = true;
+              page.dispatchEvent(event);
+          }
+
+
+          let clicked_g = false;
+
+          window.addEventListener("keydown", (e) => {
+              console.log(e.key);
+              if (e.key == "j") {
+                  e.preventDefault();
+                  window.scrollBy({
+                  top: 100,
+                  left: 100,
+                  behavior: "smooth",
+                });
+              }
+
+              if (e.key == "k") {
+                  e.preventDefault();
+                  window.scrollBy({
+                  top: -100,
+                  left: -100,
+                  behavior: "smooth",
+                });
+              }
+
+              if (e.key == "G") {
+                  e.preventDefault();
+                  window.scrollBy({
+                      top: document.body.scrollHeight,
+                      left: 0,
+                      behavior: "smooth",
+                  });
+              }
+
+              if (e.key == "g") {
+                  e.preventDefault();
+                  if (clicked_g) {
+                      window.scrollBy({
+                          top: -document.body.scrollHeight,
+                          left: 0,
+                          behavior: "smooth",
+                      });
+                  } else {
+                      clicked_g = true;
+                  }
+              }
+
+              if (e.key != "g") {
+                  if (clicked_g)
+                      clicked_g = false;
+              }
+          });
 
 
       </script>
