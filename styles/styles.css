@@ -1,7 +1,11 @@
 body {
     background-color: #0f0f0a;
     color: #fcf1b8;
-    font-family: 'Iosevka Web';
+}
+
+@font-face {
+    font-family: Iosevka;
+    src: url(../resources/fonts/iosevka-extendedbold.woff);
 }
 
 .main_body {
