@@ -23,6 +23,11 @@ a:visited {
   text-decoration: none;
 }
 
+
+#main_heading {
+    text-align: center;
+}
+
 .project_description a {
     color: yellow;
 }
@@ -105,4 +110,27 @@ a:visited {
     max-width: 60%;
     display: flex;
     gap: 12px;
+}
+
+.floating {
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    top: 33%;
+    left: 44%;
+    margin-top: -100px;
+    margin-left: -100px;
+    background-color: black;
+    
+    padding: 20px;
+}
+
+.help_msg {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.blurr {
+    filter: blur(4px);
 }

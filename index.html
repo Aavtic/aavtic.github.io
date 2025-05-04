@@ -10,9 +10,10 @@
   </head>
   <body>
       <div class="main_body">
-          <h2 id="whoami_heading">WHOAMI</h2>
-          <h1 id="main_heading">Aadish M</h1>
           <div id="whoami">
+              <h2 id="whoami_heading">WHOAMI</h2>
+              <h1 id="main_heading">Aadish M</h1>
+
               <h2 id="description_heading">DESCRIPTION</h2>
               <p id="description">
               I am Aadish M, often known by the alias 'Aavtic'.
@@ -214,7 +215,18 @@
                   </div> <!--letstalk-->
               </div>  <!--letstalk_section-->
 
-          </div>
+          </div> <!--whoami-->
+          <div class="floating" hidden>
+              <h2>Key Bindings</h2>
+              <p>
+              <div class="help_msg"><h4>h</h4> <h5>Get the help page for key bindings</h5></div>
+                  <div class="help_msg"><h4>q</h4> <h5>close window</h5></div>
+                  <div class="help_msg"><h4>j</h4><h5>Navigate down the page step by step</h5></div>
+                  <div class="help_msg"><h4>k</h4> <h5>Navigate up the page step by step</h5></div>
+                  <div class="help_msg"><h4>gg</h4><h5>Go to the top of the page</h5></div>
+                  <div class="help_msg"><h4>G</h4> <h5>Go to the bottom of the page</h5></div>
+              </p>
+          </div> <!--floating help window-->
       </div>
 
       <script>
@@ -312,9 +324,12 @@
 
 
           let clicked_g = false;
+          let clicked_h = false;
+
+          const help_window = document.querySelector(".floating");
+          const whoami = document.getElementById("whoami");
 
           window.addEventListener("keydown", (e) => {
-              console.log(e.key);
               if (e.key == "j") {
                   e.preventDefault();
                   window.scrollBy({
@@ -353,6 +368,18 @@
                   } else {
                       clicked_g = true;
                   }
+              }
+
+              if (e.key == "h") {
+                  e.preventDefault();
+                  help_window.hidden = false;
+                  whoami.classList.add("blurr");
+              }
+
+              if (e.key == "q") {
+                  e.preventDefault();
+                  help_window.hidden = true;
+                  whoami.classList.remove("blurr");
               }
 
               if (e.key != "g") {
