@@ -8,10 +8,23 @@ body {
     src: url(../resources/fonts/iosevka-extendedbold.woff);
 }
 
+@keyframes body_animation {
+    from {
+        color: transparent;
+    }
+    
+    to {
+        color: inherit;
+    }
+}
+
 .main_body {
     display: block;
     padding: 50px;
     text-align: center;
+    
+    animation-name: body_animation;
+    animation-duration: 1s;
 }
 
 
@@ -26,6 +39,9 @@ a:visited {
   background-color: transparent;
   text-decoration: none;
 }
+
+
+
 
 
 #main_heading {
@@ -127,6 +143,12 @@ a:visited {
     }
 }
 
+.hidden {
+    animation-name: help_animation_hide;
+    animation-duration: 2s;
+    
+    visibility: hidden;
+}
 
 .floating {
     width: fit-content;
@@ -151,7 +173,20 @@ a:visited {
     gap: 40px;
 }
 
-.blurr {
-    filter: blur(4px);
+
+@keyframes blurr_animation {
+    from {
+        filter: blur(1px);
+    }
+    to {
+        filter: blur(4px);
+    }
 }
 
+
+.blurr {
+    animation-name: blurr_animation;
+    animation-duration: 1s;
+    
+    filter: blur(4px);
+}
