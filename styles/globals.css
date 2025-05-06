@@ -1,0 +1,109 @@
+body {
+    background-color: #0f0f0a;
+    color: #fcf1b8;
+}
+
+@font-face {
+    font-family: Iosevka;
+    src: url(../resources/fonts/iosevka-extendedbold.woff);
+}
+
+@keyframes body_animation {
+    from {
+        color: transparent;
+    }
+    
+    to {
+        color: inherit;
+    }
+}
+
+.main_body {
+    display: block;
+    padding: 50px;
+    text-align: left;
+    
+    animation-name: body_animation;
+    animation-duration: 1s;
+}
+
+a:link {
+  color: #fcf1b8;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #fcf1b8;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+#main_heading {
+    text-align: center;
+}
+
+@keyframes help_animation {
+    from {
+        color: black;
+        top: 115%;
+    }
+    to {
+        color: inherit;
+        top: 33%;
+    }
+}
+
+.hidden {
+    animation-name: help_animation_hide;
+    animation-duration: 2s;
+    
+    visibility: hidden;
+}
+
+.floating {
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    top: 33%;
+    left: 44%;
+    margin-top: -100px;
+    margin-left: -100px;
+    background-color: black;
+    
+    border-radius: 15px;
+    padding: 20px;
+    
+    animation-name: help_animation;
+    animation-duration: 1s;
+}
+
+.help_msg {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+
+@keyframes blurr_animation {
+    from {
+        filter: blur(1px);
+    }
+    to {
+        filter: blur(4px);
+    }
+}
+
+
+.blurr {
+    animation-name: blurr_animation;
+    animation-duration: 1s;
+    
+    filter: blur(4px);
+}
+
+.highlight:hover {
+    background-color: white;
+    color: black;
+}
