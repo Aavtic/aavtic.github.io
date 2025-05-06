@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AssParser</title>
+    <link rel="stylesheet" href="../../styles/globals.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../../resources/favicon.png" />
+  </head>
+  <body>
+
+      <div class="page">
+      <div class="main_body">
+          <h2 class="project_name">PROJECT NAME</h2>
+          <h1 id="main_heading">AssParser</h1>
+
+          <div class="project_whatitis">
+              <h2 id="whatitis_head">WHAT IT IS</h2>
+              <p id="whatitis">
+              <code><a class="highlight" href="https://github.com/aavtic/ass_parser" target="_blank" rel="noopener noreferrer">ass_parser</a></code> is a Rust crate I built to make working with .ass subtitle files a lot easier. If you've ever messed around with subtitles that need fancy formatting, precise positioning, or anime-style effects, you've probably seen this file type. With AssParser, you can read, write, and tweak these files however you like no fuss. It's designed to be clean, straightforward, and Rustacean-friendly.
+              </p>
+          </div>
+
+
+          <div class="project_whyibuiltit">
+              <h2 id="whyibuiltit_head">WHY I BUILT IT</h2>
+              <p id="whyibuiltit">
+              I have worked with <code>.ass</code> files before in <a class="highlight" href="https://www.rust-lang.org/" target="_blank" rel="noopener noreferrer">Rust</a> and found that there aren't many libraries that did what I wanted (Read and Modify .ass files), Convert a <code>.srt</code> (SubRip Subtitle File) to a <code>.ass</code> file. Plus most of them are not maintained. So I decided to build my own parser in Rust that makes it easy to create, modify, convert and understand these files without the headacheIt was a fun way to dive deep into parsing world and also contributing to the community.
+              </p>
+          </div>
+
+
+          <div class="project_howitworks">
+              <h2 id="howitworks_head">HOW IT WORKS</h2>
+              <p id="howitworks">
+              Under the hood, AssParser breaks down an <code>.ass</code> subtitle file into clearly defined parts using Rust structs like ScriptInfo for metadata, V4Style  for styles, and Events for dialogue lines <a class="highlight" href="http://www.tcax.org/docs/ass-specs.htm" target="_blank" rel="noopener noreferrer">to_know_more</a>. These sections are all wrapped neatly inside an AssFile struct, making it easy to build or modify subtitles programmatically. You don’t need to worry about formatting rules or file structure—just work with the fields you care about, and AssParser handles the rest.
+              </p>
+          </div>
+
+      </div> <!--main_body-->
+      </div> <!--page-->
+
+
+      <div class="floating" hidden>
+          <h2>Key Bindings</h2>
+          <p>
+          <div class="help_msg"><h4>h</h4> <h5>Get the help page for key bindings</h5></div>
+              <div class="help_msg"><h4>q</h4> <h5>close window</h5></div>
+              <div class="help_msg"><h4>j</h4><h5>Navigate down the page step by step</h5></div>
+              <div class="help_msg"><h4>k</h4> <h5>Navigate up the page step by step</h5></div>
+              <div class="help_msg"><h4>gg</h4><h5>Go to the top of the page</h5></div>
+              <div class="help_msg"><h4>G</h4> <h5>Go to the bottom of the page</h5></div>
+          </p>
+      </div> <!--floating help window-->
+
+      <script src="../../scripts/vim_keybindings.js"></script>
+  </body>
+</html>
