@@ -8,6 +8,7 @@ body {
     src: url(../resources/fonts/iosevka-extendedbold.woff);
 }
 
+
 @keyframes body_animation {
     from {
         color: transparent;
