@@ -50,6 +50,7 @@ if (e.key == "h") {
   help_window.hidden = false;
   clicked_h = true;
   main_body.classList.add("blurr");
+  main_body.classList.remove("unblurr");
 }
 
 if (e.key == "q") {
@@ -57,6 +58,7 @@ if (e.key == "q") {
   help_window.hidden = true;
   clicked_h = false;
   main_body.classList.remove("blurr");
+  main_body.classList.add("unblurr");
 }
 
 if (e.key != "g") {

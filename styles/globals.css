@@ -44,6 +44,24 @@ a:visited {
     text-align: center;
 }
 
+@keyframes remove_help_animation {
+    from {
+        color: inherit;
+        top: 33%;
+    }
+    to {
+        color: black;
+        top: 115%;
+    }
+}
+
+.remove_floating {
+    animation-name: remove_help_animation;
+    animation-duration: 1s;
+    
+    visibility: hidden;
+}
+
 @keyframes help_animation {
     from {
         color: black;
@@ -95,12 +113,28 @@ a:visited {
     }
 }
 
+@keyframes unblurr_animation {
+    from {
+        filter: blur(4px);
+    }
+    to {
+        filter: blur(1px);
+    }
+}
+
 
 .blurr {
     animation-name: blurr_animation;
     animation-duration: 1s;
     
     filter: blur(4px);
+}
+
+.unblurr {
+    animation-name: unblurr_animation;
+    animation-duration: .4s;
+    
+    filter: none;
 }
 
 .highlight:hover {
