@@ -121,7 +121,7 @@ a:visited {
         filter: blur(4px);
     }
     to {
-        filter: blur(1px);
+        filter: blur(0.1px);
     }
 }
 
