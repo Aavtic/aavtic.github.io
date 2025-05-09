@@ -3,10 +3,6 @@ body {
     color: #fcf1b8;
 }
 
-@font-face {
-    font-family: Iosevka;
-    src: url(../resources/fonts/iosevka-extendedbold.woff);
-}
 
 
 @keyframes body_animation {
