@@ -25,9 +25,6 @@ body {
     display: block;
     padding: 50px;
     text-align: left;
-    
-    animation-name: body_animation;
-    animation-duration: 1s;
 }
 
 a:link {

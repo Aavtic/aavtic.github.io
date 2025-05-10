@@ -4,16 +4,6 @@ body {
 }
 
 
-@keyframes body_animation {
-    from {
-        color: transparent;
-    }
-    
-    to {
-        color: inherit;
-    }
-}
-
 .main_body {
     display: block;
     padding: 50px;
