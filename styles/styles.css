@@ -4,7 +4,6 @@ body {
 }
 
 
-
 @keyframes body_animation {
     from {
         color: transparent;
@@ -24,7 +23,6 @@ body {
 #whoami {
     animation-name: body_animation;
     animation-duration: 1s;
-
 }
 
 
