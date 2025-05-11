@@ -9,7 +9,7 @@ if (e.key == "j" && !clicked_h) {
   e.preventDefault();
   window.scrollBy({
   top: 100,
-  left: 100,
+  left: -100,
   behavior: "smooth",
 });
 }
