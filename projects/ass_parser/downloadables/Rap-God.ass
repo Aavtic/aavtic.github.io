@@ -1,0 +1,91 @@
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,16,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,1,0,2,10,10,10,1
+
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: ,,,,,,,,,
+Dialogue: 0,0:00:00.00,0:00:02.16,Default,,0,0,0,,{\c&Hd27491&}♪ You're stuck in a time warp from 2004 though ♪ 
+Dialogue: 0,0:00:02.16,0:00:04.30,Default,,0,0,0,,{\c&H3dbd9d&}♪ And I don't know what the fuck that you rhyme for ♪ 
+Dialogue: 0,0:00:04.30,0:00:06.84,Default,,0,0,0,,{\c&H8aad9d&}♪ You're pointless as Rapunzel with fuckin' cornrows ♪ 
+Dialogue: 0,0:00:06.84,0:00:08.80,Default,,0,0,0,,{\c&H61d0b&}♪ You write normal? Fuck being normal ♪ 
+Dialogue: 0,0:00:08.80,0:00:10.41,Default,,0,0,0,,{\c&H6d32d6&}♪ And I just bought a new raygun from the future ♪ 
+Dialogue: 0,0:00:10.41,0:00:11.67,Default,,0,0,0,,{\c&Hdce5a&}♪ Just to come and shoot ya ♪ 
+Dialogue: 0,0:00:11.67,0:00:13.28,Default,,0,0,0,,{\c&H53f35&}♪ Like when Fabolous made Ray J mad ♪ 
+Dialogue: 0,0:00:13.28,0:00:15.11,Default,,0,0,0,,{\c&Hc5686&}♪ 'Cause Fab said he looked like a fag at Mayweather's pad ♪ 
+Dialogue: 0,0:00:15.11,0:00:16.61,Default,,0,0,0,,{\c&H8bf437&}♪ Singin' to a man while he played piano ♪ 
+Dialogue: 0,0:00:16.61,0:00:18.71,Default,,0,0,0,,{\c&He1eae9&}♪ Man, oh man, that was a 24/7 special ♪ 
+Dialogue: 0,0:00:18.71,0:00:20.02,Default,,0,0,0,,{\c&H5a3f85&}♪ On the cable channel ♪ 
+Dialogue: 0,0:00:20.02,0:00:21.52,Default,,0,0,0,,{\c&H56d122&}♪ So Ray J went straight to the radio station ♪ 
+Dialogue: 0,0:00:21.52,0:00:22.49,Default,,0,0,0,,{\c&Hbcc6ca&}♪ The very next day ♪ 
+Dialogue: 0,0:00:22.49,0:00:23.79,Default,,0,0,0,,{\c&Hd96fca&}♪ "Hey, Fab, I'ma kill you!" ♪ 
+Dialogue: 0,0:00:23.79,0:00:25.39,Default,,0,0,0,,{\c&H5ae43d&}♪ Lyrics comin' at you at supersonic speed ♪ 
+Dialogue: 0,0:00:25.39,0:00:26.86,Default,,0,0,0,,{\c&Hb3fe36&}♪ J.J. Fad ♪ 
+Dialogue: 0,0:00:26.86,0:00:28.32,Default,,0,0,0,,{\c&H22f5dd&}♪ Uh, summa-lumma, dooma-lumma, you assumin' I'm a human ♪ 
+Dialogue: 0,0:00:28.32,0:00:29.59,Default,,0,0,0,,{\c&Hb4bbc6&}♪ What I gotta do to get it through to you I'm superhuman ♪ 
+Dialogue: 0,0:00:29.59,0:00:30.89,Default,,0,0,0,,{\c&H2c856&}♪ Innovative and I'm made of rubber ♪ 
+Dialogue: 0,0:00:30.89,0:00:32.09,Default,,0,0,0,,{\c&He9dc7d&}♪ So that anything you say is ricochetin' ♪ 
+Dialogue: 0,0:00:32.09,0:00:33.60,Default,,0,0,0,,{\c&H983a4e&}♪ Off of me and it'll glue to you and ♪ 
+Dialogue: 0,0:00:33.60,0:00:34.76,Default,,0,0,0,,{\c&H64f3f3&}♪ I'm devastating, more than ever demonstrating ♪ 
+Dialogue: 0,0:00:34.76,0:00:36.27,Default,,0,0,0,,{\c&Hcd85fe&}♪ How to give a motherfuckin' audience ♪ 
+Dialogue: 0,0:00:36.27,0:00:37.73,Default,,0,0,0,,{\c&Hbbf292&}♪ A feeling like it's levitating, never fading ♪ 
+Dialogue: 0,0:00:37.73,0:00:38.97,Default,,0,0,0,,{\c&H599b10&}♪ And I know that the haters are forever waiting ♪ 
+Dialogue: 0,0:00:38.97,0:00:39.94,Default,,0,0,0,,{\c&H402ba&}♪ For the day that they can say I fell off ♪ 
+Dialogue: 0,0:00:39.94,0:00:41.20,Default,,0,0,0,,{\c&Hcb7c56&}♪ They'll be celebrating ♪ 
+Dialogue: 0,0:00:41.20,0:00:42.74,Default,,0,0,0,,{\c&Hfa453&}♪ 'Cause I know the way to get 'em motivated ♪ 
+Dialogue: 0,0:00:42.74,0:00:43.71,Default,,0,0,0,,{\c&H3a405&}♪ I make elevating music, you make elevator music ♪ 
+Dialogue: 0,0:00:43.71,0:00:45.27,Default,,0,0,0,,{\c&H2b4d8&}♪ "Oh, he's too mainstream." ♪ 
+Dialogue: 0,0:00:45.27,0:00:46.11,Default,,0,0,0,,{\c&H2df8be&}♪ Well, that's what they do when they get jealous ♪ 
+Dialogue: 0,0:00:46.11,0:00:47.08,Default,,0,0,0,,{\c&He79ab&}♪ They confuse it ♪ 
+Dialogue: 0,0:00:47.08,0:00:48.34,Default,,0,0,0,,{\c&H3abfac&}♪ "It's not hip hop, it's pop" ♪ 
+Dialogue: 0,0:00:48.34,0:00:49.61,Default,,0,0,0,,{\c&Ha7d2dd&}♪ 'Cause I found a hella way to fuse it ♪ 
+Dialogue: 0,0:00:49.61,0:00:50.91,Default,,0,0,0,,{\c&H4a4a81&}♪ With rock, shock rap with Doc ♪ 
+Dialogue: 0,0:00:50.91,0:00:52.52,Default,,0,0,0,,{\c&H1e76f9&}♪ Throw on Lose Yourself and make 'em lose it ♪ 
+Dialogue: 0,0:00:52.52,0:00:53.92,Default,,0,0,0,,{\c&Hc5654c&}♪ "I don't know how to make songs like that" ♪ 
+Dialogue: 0,0:00:53.92,0:00:55.52,Default,,0,0,0,,{\c&Hcce649&}♪ "I don't know what words to use" ♪ 
+Dialogue: 0,0:00:55.52,0:00:56.75,Default,,0,0,0,,{\c&H934654&}♪ Let me know when it occurs to you ♪ 
+Dialogue: 0,0:00:56.75,0:00:57.79,Default,,0,0,0,,{\c&H8b30e0&}♪ While I'm rippin' any one of these verses ♪ 
+Dialogue: 0,0:00:57.79,0:00:59.22,Default,,0,0,0,,{\c&Hedbadf&}♪ That verses you ♪ 
+Dialogue: 0,0:00:59.22,0:01:00.46,Default,,0,0,0,,{\c&H11cb9b&}♪ It's curtains, I'm inadvertently hurtin' you ♪ 
+Dialogue: 0,0:01:00.46,0:01:01.72,Default,,0,0,0,,{\c&H9eea6&}♪ How many verses I gotta murder to ♪ 
+Dialogue: 0,0:01:01.72,0:01:03.23,Default,,0,0,0,,{\c&He128f2&}♪ Prove that if you were half as nice ♪ 
+Dialogue: 0,0:01:03.23,0:01:04.93,Default,,0,0,0,,{\c&Hb265a&}♪ Your songs you could sacrifice virgins too?! ♪ 
+Dialogue: 0,0:01:04.93,0:01:07.33,Default,,0,0,0,,{\c&H8cec0&}♪ Ugh, school flunkie, pill junkie ♪ 
+Dialogue: 0,0:01:07.33,0:01:09.80,Default,,0,0,0,,{\c&He667e7&}♪ But look at the accolades these skills brung me ♪ 
+Dialogue: 0,0:01:09.80,0:01:11.87,Default,,0,0,0,,{\c&Hbf5c3&}♪ Full of myself, but still hungry ♪ 
+Dialogue: 0,0:01:11.87,0:01:14.44,Default,,0,0,0,,{\c&H5bee6b&}♪ I bully myself 'cause I make me do what I put my mind to ♪ 
+Dialogue: 0,0:01:14.44,0:01:16.97,Default,,0,0,0,,{\c&H857467&}♪ And I'm a million leagues above you ♪ 
+Dialogue: 0,0:01:16.97,0:01:18.37,Default,,0,0,0,,{\c&H102a55&}♪ Ill when I speak in tongues ♪ 
+Dialogue: 0,0:01:18.37,0:01:20.01,Default,,0,0,0,,{\c&H7cd8df&}♪ But it's still tongue-in-cheek, fuck you ♪ 
+Dialogue: 0,0:01:20.01,0:01:22.21,Default,,0,0,0,,{\c&Hcf4db4&}♪ I'm drunk, so Satan, take the fucking wheel ♪ 
+Dialogue: 0,0:01:22.21,0:01:23.68,Default,,0,0,0,,{\c&Hf3e0f8&}♪ I'ma sleep in the front seat ♪ 
+Dialogue: 0,0:01:23.68,0:01:26.55,Default,,0,0,0,,{\c&Hd73ba6&}♪ Bumpin' Heavy D and the Boyz, still "Chunky, but funky" ♪ 
+Dialogue: 0,0:01:26.55,0:01:27.82,Default,,0,0,0,,{\c&H6410ad&}♪ But in my head there's something ♪ 
+Dialogue: 0,0:01:27.82,0:01:29.82,Default,,0,0,0,,{\c&He8d469&}♪ I can feel tugging and struggling ♪ 
+Dialogue: 0,0:01:29.82,0:01:31.35,Default,,0,0,0,,{\c&Hc45b30&}♪ Angels fight with devils and ♪ 
+Dialogue: 0,0:01:31.35,0:01:33.52,Default,,0,0,0,,{\c&H6a4d5d&}♪ Here's what they want from me ♪ 
+Dialogue: 0,0:01:33.52,0:01:35.29,Default,,0,0,0,,{\c&Ha2f51&}♪ They're askin' me to eliminate some of the women hate ♪ 
+Dialogue: 0,0:01:35.29,0:01:36.63,Default,,0,0,0,,{\c&H7367bc&}♪ But if you take into consideration ♪ 
+Dialogue: 0,0:01:36.63,0:01:37.93,Default,,0,0,0,,{\c&H9e7f14&}♪ The bitter hatred I have ♪ 
+Dialogue: 0,0:01:37.93,0:01:39.19,Default,,0,0,0,,{\c&Hf940bc&}♪ Then you may be a little patient ♪ 
+Dialogue: 0,0:01:39.19,0:01:40.46,Default,,0,0,0,,{\c&H8197a3&}♪ And more sympathetic to the situation ♪ 
+Dialogue: 0,0:01:40.46,0:01:42.30,Default,,0,0,0,,{\c&Hb0b044&}♪ And understand the discrimination ♪ 
+Dialogue: 0,0:01:42.30,0:01:44.17,Default,,0,0,0,,{\c&Hda7ee0&}♪ But fuck it, life's handin' you lemons? ♪ 
+Dialogue: 0,0:01:44.17,0:01:45.47,Default,,0,0,0,,{\c&H95ce77&}♪ Make lemonade then! ♪ 
+Dialogue: 0,0:01:45.47,0:01:47.07,Default,,0,0,0,,{\c&H843e86&}♪ But if I can't batter the women ♪ 
+Dialogue: 0,0:01:47.07,0:01:48.77,Default,,0,0,0,,{\c&H98c13&}♪ How the fuck am I supposed to bake them a cake then?! ♪ 
+Dialogue: 0,0:01:48.77,0:01:50.31,Default,,0,0,0,,{\c&H14180&}♪ Don't mistake him for Satan ♪ 
+Dialogue: 0,0:01:50.31,0:01:52.01,Default,,0,0,0,,{\c&Hbcddc4&}♪ It's a fatal mistake if you think I need to be overseas ♪ 
+Dialogue: 0,0:01:52.01,0:01:53.98,Default,,0,0,0,,{\c&H0b640&}♪ And take a vacation to trip a broad ♪ 
+Dialogue: 0,0:01:53.98,0:01:55.44,Default,,0,0,0,,{\c&Hb859c5&}♪ And make her fall on her face and ♪ 
+Dialogue: 0,0:01:55.44,0:01:56.55,Default,,0,0,0,,{\c&Hd2452a&}♪ Don't be a retard ♪ 
+Dialogue: 0,0:01:56.55,0:01:58.18,Default,,0,0,0,,{\c&H18c190&}♪ Be a king? Think not ♪ 
+Dialogue: 0,0:01:58.18,0:02:01.38,Default,,0,0,0,,{\c&H37b70&}♪ Why be a king when you can be a God? ♪ 
