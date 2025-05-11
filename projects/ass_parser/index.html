@@ -7,6 +7,9 @@
     <title>AssParser</title>
     <link rel="stylesheet" href="../../styles/globals.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../styles/third_party/x256.min.css">
+    <script src="../../scripts/third_party/highlight.min.js"></script>
+
     <link rel="icon" href="../../resources/favicon.png" />
   </head>
   <body>
@@ -19,7 +22,7 @@
           <div class="project_whatitis">
               <h2 id="whatitis_head">WHAT IT IS</h2>
               <p id="whatitis">
-              <code><a class="highlight" href="https://github.com/aavtic/ass_parser" target="_blank" rel="noopener noreferrer">ass_parser</a></code> is a Rust crate I built to make working with .ass subtitle files a lot easier. If you've ever messed around with subtitles that need fancy formatting, precise positioning, or anime-style effects, you've probably seen this file type. With AssParser, you can read, write, and tweak these files however you like no fuss. It's designed to be clean, straightforward, and Rustacean-friendly.
+              <a class="highlight" href="https://github.com/aavtic/ass_parser" target="_blank" rel="noopener noreferrer">ass_parser</a> is a Rust crate I built to make working with .ass subtitle files a lot easier. If you've ever messed around with subtitles that need fancy formatting, precise positioning, or anime-style effects, you've probably seen this file type. With AssParser, you can read, write, and tweak these files however you like no fuss. It's designed to be clean, straightforward, and Rustacean-friendly.
               </p>
           </div>
 
@@ -39,6 +42,368 @@
               </p>
           </div>
 
+
+          <div class="example_div">
+              <h2 id="subtitle_example_heading">SUBTITLING RAP GOD - BECAUSE WHY NOT</h2>
+              <p id="subtitle_example">
+              I wanted to test my parser with a fast changing subtitles, So I taught why not style subtitles with one of the fastest rap songs out there? Using AssParser. I created .ass subtitle file synced to <a class="highlight" href="https://music.youtube.com/watch?v=MBJFPq2Llps&si=eC6zX8J1VvhxmLfS" target="_blank" rel="noopener noreferrer">Rap God by Eminem</a> complete with timed lyrics and random colors.
+
+              <p><strong>
+             ⚠️ Note: This is just a demo to showcase what AssParser can do. All rights to the song and lyrics belong to Eminem and his copyright holders.
+              </p></strong>
+
+              Here is a demo where I subtitled <a class="highlight" href="https://music.youtube.com/watch?v=MBJFPq2Llps&si=eC6zX8J1VvhxmLfS" target="_blank" rel="noopener noreferrer">Rap God by Eminem</a> with Random Colors!
+
+              <div id="video">
+              <video controls width=500>
+                  <source src="./downloadables/subtitled.mp4" type="video/mp4"/>
+              </video>
+              </div>
+              <span></span>
+
+              <br></br>
+              <h3>Here is the sample code that I used to generate the random colored subtitles.</h3>
+              <div class="sample_code_div">
+                  <pre>
+                  <code class="hljs">
+use ass_parser::{AssFile, Events, Dialogue, V4Format, ScriptInfo};
+use hex_color::HexColor;
+
+fn main() {
+    let srt_file = AssFile::from_srt("./Rap-God.srt");
+    let output_path = "./Rap-God.ass";
+
+    let mut ass_file = AssFile::new();
+    let mut event = Events::new();
+
+    let mut srt_iter =  srt_file.iter();
+    let next = srt_iter.next().unwrap();
+    let dialogue = Dialogue::default()
+        .set_start(&next.start)
+        .set_colour(HexColor::RED)
+        .set_end(&next.end)
+        .set_text(&next.text)
+        .set_colour(HexColor::random_rgb());
+
+    event.add_dialogue(dialogue);
+
+
+    println!("Generating subtitles...");
+
+    for srt_seg in srt_iter {
+        let dialogue = Dialogue::default()
+            .set_start(&srt_seg.start)
+            .set_end(&srt_seg.end)
+            .set_text(&srt_seg.text)
+            .set_colour(HexColor::random_rgb());
+        event.add_dialogue(dialogue);
+    }
+    event.create();
+
+    ass_file.components.v4.set_v4(V4Format::default());
+    ass_file.components.script.set_script(ScriptInfo::default());
+    ass_file.components.events.set_events(event);
+    AssFile::save_file(&ass_file, output_path);
+    println!("Generated and saved .ass file to {}", output_path);
+}
+                  </code>
+                  </pre>
+              </div>
+
+
+              <h3>Here are the files that I used to create this:</h3>
+              <br></br>
+              <a class="highlight" href="./downloadables/Rap-God.srt">Rap-God.srt</a>
+
+              <br></br>
+              The final <code>.ass</code> file
+              <br></br>
+              <a class="highlight" href="./downloadables/Rap-God.ass" target="_blank" rel="noopener noreferrer">Rap-God.ass</a>
+
+              </p>
+
+          </div> <!--example_div-->
+
+
+          <div class="installation_div">
+              <h2 id="installation_header">INSTALLATION</h2>
+              <p id="installation">
+              <a class="highlight" href="https://github.com/aavtic/ass_parser" target="_blank" rel="noopener noreferrer">ass_parser</a> is a Rust crates which you can use to create, read and modify <code>.ass</code> files.
+
+              To download the rust crate you can add this crate using <code>cargo</code> package manager.
+              <br></br>
+              <code>cargo add ass_parser</code>
+              <br></br>
+
+              This adds <code>ass_parser</code> as a dependency to your rust project
+              </p>
+          </div>
+
+
+          <div class="examples_div">
+              <h2 id="examples_header">EXAMPLE - DEFAULT VALUES</h2>
+              <p id="examples">
+              <h3>Creating a simple Advanced SubStation Alpha (.ass) file with default values!</h3>
+
+              <div class="sample_code_div">
+                  <h4>Imports</h4>
+              <pre>
+                  <code class="hljs">
+use ass_parser::{AssFile, ScriptInfo, V4Format, Events, AssFileOptions};
+use hex_color::HexColor;
+                </code>
+            </pre>
+            
+
+              <h4>Set Default values</h4>
+            <pre>
+                <code class="hljs">
+
+    let mut ass_file = AssFile::new();
+    let hexcolor = AssFileOptions::get_ass_color(HexColor::YELLOW);
+
+    ass_file.components.script
+        .set_script(ScriptInfo::default());
+
+    ass_file.components.v4
+        .set_v4(V4Format::default())
+        .set_primarycolour(&hexcolor);
+
+    ass_file.components.events
+        .set_events(Events::default());
+                  </code>
+              </pre>
+
+              <pre>
+              <h4>Save the file</h4>
+                  <code class="hljs">
+AssFile::save_file(&ass_file, "new_subtitles.ass")
+                </code>
+            </pre>
+              </div>
+
+              </p>
+          </div>
+
+          <div class="dialogue_examples_div">
+          <h2 id="dialogue_examples_header">EXAMPLE - ADD DIALOGUES</h2>
+          <p id="examples">
+              <h3>Add Dialogues</h3>
+      
+              <div class="sample_code_div">
+                  <h4>Imports</h4>
+                  <pre>
+                      <code class="hljs">
+use ass_parser::{AssFile, ScriptInfo, V4Format, Events, AssFileOptions, Dialogue};
+use hex_color::HexColor;
+                      </code>
+                  </pre>
+
+                  <h4>Add the dialogues</h4>
+      
+                  <pre>
+                      <code class="hljs">
+          let mut ass_file = AssFile::new();
+          let hexcolor = AssFileOptions::get_ass_color(HexColor::YELLOW);
+      
+          let first_dialogue = Dialogue::default()
+              .set_text("Hello There!")
+              .set_start("0:00:00.10")
+              .set_end("0:00:00.50");
+      
+          let second_dialogue = Dialogue::default()
+              .set_text("Hello Friend!")
+              .set_start("00:00.50")
+              .set_end("00:00.58");
+      
+          let third_dialogue = Dialogue::default()
+              .set_text("Hello World!!")
+              .set_start("0:00:00.58")
+              .set_end("0:00:01.01");
+      
+          let events = Events::new()
+              .add_first_dialogue(first_dialogue)?
+              .add_dialogue(second_dialogue)
+              .add_dialogue(third_dialogue)
+              .create();
+      
+          ass_file.components.script
+              .set_script(ScriptInfo::default())
+              .set_scripttype("FFMPEG");
+      
+          ass_file.components.v4
+              .set_v4(V4Format::default())
+              .set_primarycolour(&hexcolor);
+      
+          ass_file.components.events
+              .set_events(events);
+      
+          AssFile::save_file(&ass_file, "new_subtitles.ass");
+      
+          Ok(())
+  }
+                      </code>
+                  </pre>
+      
+                  <pre>
+                      <h4>Save the file</h4>
+                      <code class="hljs">
+  AssFile::save_file(&ass_file, "new_subtitles.ass");
+                      </code>
+                  </pre>
+              </div>
+          </p>
+      </div>
+
+
+      <div class="colors_examples_div">
+    <h2 id="colors_examples_header">EXAMPLE - ADD COLORS TO SUBTITLES</h2>
+    <p id="colors_examples">
+        <h3>Add Colors to Subtitles.</h3>
+
+        <div class="sample_code_div">
+            <h4>Description</h4>
+            <pre>
+            <code class="hljs">
+you need to make sure to set this feature flag to have random rgb generation working
+hex_color = {version = "3.0.0", features = ["rand", "std"]}
+
+set the hex_color crate to the latest available version.
+            </code>
+            </pre>
+
+            <h4>Imports</h4>
+            <pre>
+                <code class="hljs">
+use hex_color::HexColor;
+use ass_parser::Dialogue;
+use ass_parser::Events;
+                </code>
+            </pre>
+
+            <pre>
+                <code class="hljs">
+let random_color: HexColor = HexColor::random_rgb();
+
+let dialogue = Dialogue::default()
+    .set_text("Hello Friend!")
+    .set_start("0:00:00.50")
+    .set_end("0:00:00.58")
+    .set_colour(random_color);
+
+let events = Events::new()
+    .add_first_dialogue(dialogue).expect("Unable to add Dialogue");
+                </code>
+                    </pre>
+                </div>
+            </p>
+       </div>
+
+
+
+       <div class="srt_ass_example_div">
+    <h2 id="srt_ass_example_header">EXAMPLE - SRT TO ASS CONVERSION</h2>
+    <p id="srt_ass_example">
+        <h3>Added Support for SubRip files.</h3>
+
+        <div class="sample_code_div">
+            <h4>Description</h4>
+            <h5>
+Now you can load .srt files and convert them to .ass files and even modify them during the process.
+This example loads a SubRip file (RapGod.srt), adds random colors to each subtitle,
+then converts and saves the result as an .ass file.
+            </h5>
+
+            <h4>Imports</h4>
+            <pre>
+                <code class="hljs">
+use hex_color::HexColor;
+use ass_parser::{AssFile, AssFileOptions};
+use ass_parser::{ScriptInfo, V4Format, Events, Dialogue};
+                </code>
+            </pre>
+
+            <pre>
+                <code class="hljs">
+fn main() {
+    let hexcolor = AssFileOptions::get_ass_color(HexColor::YELLOW);
+    let srt_file = AssFile::from_srt("examples/RapGod.srt");
+    let mut ass_file = AssFile::new();
+    let mut event = Events::default();
+
+    for srt_seg in srt_file.iter() {
+        let start = &srt_seg.start;
+        let end = &srt_seg.end;
+        let text = &srt_seg.text;
+
+        let random_color: HexColor = HexColor::random_rgb();
+
+        let dialogue = Dialogue::default()
+            .set_start(&start)
+            .set_end(&end)
+            .set_text(&text)
+            .set_colour(random_color);
+
+        event.add_dialogue(dialogue);
+    }
+
+    ass_file.components.script
+        .set_script(ScriptInfo::default());
+
+    ass_file.components.v4
+        .set_v4(V4Format::default())
+        .set_primarycolour(&hexcolor);
+
+    ass_file.components.events
+        .set_events(event);
+
+    AssFile::save_file(&ass_file, "new_subtitle.ass");
+}
+                </code>
+            </pre>
+
+            <pre>
+                <h4>Save the file</h4>
+                <code class="hljs">
+AssFile::save_file(&ass_file, "new_subtitle.ass");
+                    </code>
+                </pre>
+            </div>
+        </p>
+      </div>
+
+
+          <div class="opensource-div">
+              <h2 id="opensource_head">WHAT IT IS</h2>
+                  <h2 id="project_subheading">Open Source & Community Driven</h2>
+    <p>
+        <a class="highlight" href="https://github.com/aavtic/ass_parser" target="_blank">ass_parser</a> is fully open source and packed with documentation and examples. 
+        Whether you're just exploring or want to contribute, you're welcome!
+    </p>
+
+    <p>
+        ⭐ Star us on GitHub: 
+        <a class="highlight" href="https://github.com/aavtic/ass_parser" target="_blank">
+            <img src="https://img.shields.io/github/stars/aavtic/ass_parser?style=social" alt="GitHub Repo stars">
+        </a>
+    </p>
+
+    <p>
+        🤝 Want to contribute? Check out our 
+        <a class="highlight" href="https://github.com/aavtic/ass_parser/blob/main/CONTRIBUTING.md" target="_blank">contribution guidelines</a>.
+    </p>
+
+          </div>
+
+
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <h5> This page is open-source: <a class="highlight" href="https://github.com/aavtic/aavtic.github.io" target="_blank" rel="noopener noreferrer">web-page source</a>
+
+
+
       </div> <!--main_body-->
       </div> <!--page-->
 
@@ -54,6 +419,11 @@
               <div class="help_msg"><h4>G</h4> <h5>Go to the bottom of the page</h5></div>
           </p>
       </div> <!--floating help window-->
+
+
+      <script src="../../scripts/third_party/rust.min.js"></script>
+      <script>hljs.highlightAll();</script>
+
 
       <script src="../../scripts/vim_keybindings.js"></script>
   </body>

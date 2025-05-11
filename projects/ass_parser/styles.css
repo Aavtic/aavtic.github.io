@@ -6,3 +6,14 @@
 .main_body a {
     color: yellow;
 }
+
+.sample_code_div pre code {
+    width: fit-content;
+    background-color: inherit !important;
+    display: block;
+    padding: 5px;
+    overflow: auto;
+    max-height: 400px;
+    word-wrap: normal;
+    color: white;
+}
