@@ -141,3 +141,7 @@ a:visited {
     background-color: white;
     color: black;
 }
+
+.web_source a {
+    color: yellow;
+}
