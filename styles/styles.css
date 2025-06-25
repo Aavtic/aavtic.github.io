@@ -62,6 +62,7 @@ body {
 
 .single_project {
     padding: 2px;
+    border: 1px solid azure;
 }
 
 .project_heading_div {
