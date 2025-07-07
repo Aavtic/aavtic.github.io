@@ -88,13 +88,17 @@ a:visited {
     left: 44%;
     margin-top: -100px;
     margin-left: -100px;
-    background-color: black;
     
     border-radius: 15px;
     padding: 20px;
     
     animation-name: help_animation;
     animation-duration: 1s;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 20px;
 }
 
 .help_msg {
